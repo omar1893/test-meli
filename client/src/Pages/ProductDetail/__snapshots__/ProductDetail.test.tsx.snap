@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDetail Should match snapshot 1`] = `
+<div>
+  <div>
+    <p
+      class="loading-message"
+    >
+      Cargando...
+    </p>
+  </div>
+</div>
+`;

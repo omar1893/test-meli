@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@300;400;500;600;700&display=swap');
+@import '../public/sass/mixins/grid';
+@import '../public/sass/variables/variables';
+
+
+//Componentes
+//@import './components/SearchBar/Searchbar.scss';
+html {
+  font-size: 10px;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: $light-gray;
+}
+
+body {
+  margin: 0;
+}

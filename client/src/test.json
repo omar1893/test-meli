@@ -1,0 +1,57 @@
+{
+  "author": {
+    "name": "John Doe",
+    "lastname": "Doe"
+  },
+  "categories": [
+    "Electronica, audio y video",
+    "ipod",
+    "Reproductores",
+    "Ipod Touch",
+    "32GB"
+  ],
+  "items": [
+    {
+      "id": "MLA851931164",
+      "title": "Ipod Touch 32gb",
+      "price": {
+        "currency": "ARS",
+        "amount": 31999,
+        "decimals": 2
+      },
+      "picture": "https://d2yoo3qu6vrk5d.cloudfront.net/images/20180926115641/000_1930g3.jpg",
+      "condition": "new",
+      "free_shipping": true,
+      "sold_quantity": 0,
+      "description": "Ipod Touch 32gb"
+    },
+    {
+      "id": "MLA851931165",
+      "title": "Ipod Touch 64gb",
+      "price": {
+        "currency": "ARS",
+        "amount": 41999,
+        "decimals": 2
+      },
+      "picture": "https://www.macworld.com/wp-content/uploads/2023/01/iphonexs-1.jpg?quality=50&strip=all",
+      "condition": "new",
+      "free_shipping": false,
+      "sold_quantity": 0,
+      "description": "Ipod Touch 64gb"
+    },
+    {
+      "id": "MLA851931166",
+      "title": "Ipod Touch 128gb",
+      "price": {
+        "currency": "ARS",
+        "amount": 51999,
+        "decimals": 2
+      },
+      "picture": "https://www.zdnet.com/a/img/2018/10/08/92c42005-ef30-47a8-b408-01173482de5f/iphone-xs-2.jpg",
+      "condition": "new",
+      "free_shipping": true,
+      "sold_quantity": 0,
+      "description": "Ipod Touch 128gb"
+    }
+  ]
+}

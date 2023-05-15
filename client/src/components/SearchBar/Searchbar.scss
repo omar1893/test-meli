@@ -1,0 +1,39 @@
+@import "../../../src/index.scss";
+
+.header {
+  @include grid-basic($container: true);
+  background-color: $yellow-ml;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+
+  .logo {
+    @include grid-positioning(2, 3);
+  }
+
+  .header-searchInput {
+    @include grid-positioning(3, 12, true);
+    display: flex;
+
+    input {
+      border: none;
+      border-radius: 0.1rem;
+      font-size: 1.8rem;
+      padding: 1rem;
+      width: 100%;
+
+      &::placeholder {
+        color: $dark-gray;
+      }
+    }
+
+    button {
+        border: none;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+
+        img {
+            pointer-events: none;
+        }
+    }
+  }
+}

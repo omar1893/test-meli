@@ -1,0 +1,21 @@
+@import "../../../src/index.scss";
+
+.list {
+    @include grid-basic($container: true);
+    @include grid-basic-rows(2);
+
+    .list__container {
+        @include grid-positioning(2, 12);
+        @include grid-positioning-rows(2, auto);
+
+        background-color: #FFFFFF;
+        padding: 1.6rem;
+
+        .list__container--divider {
+            border-top: 1px solid $light-gray;
+            margin-top: 1.6rem;
+            margin-bottom: 1.6rem;
+        }
+    }
+
+}

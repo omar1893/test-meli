@@ -1,0 +1,28 @@
+@mixin grid-basic($amount: 12, $container: false){
+    display: grid;
+    grid-template-columns: repeat($amount, 1fr);
+    column-gap: 1rem;
+
+    @if($container) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@mixin grid-basic-rows ($amount, $sizing: auto) {
+    grid-template-rows: repeat($amount, $sizing);
+}
+
+@mixin grid-positioning($from, $to, $offset: false) {
+    grid-column-start: $from;
+    grid-column-end: $to;
+
+    @if($offset) {
+        margin-left: -1rem;
+    };
+}
+
+@mixin grid-positioning-rows($from, $to, $offset: false) {
+    grid-row-start: $from;
+    grid-row-end: $to;
+}

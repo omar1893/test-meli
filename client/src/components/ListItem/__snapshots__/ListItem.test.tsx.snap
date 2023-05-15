@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem Should match snapshot 1`] = `
+<div>
+  <div
+    class="listItem"
+  >
+    <img
+      alt=""
+      class="listItem__image"
+      src="item-picture.jpg"
+    />
+    <div
+      class="listItem__info-container"
+    >
+      <div
+        class="listItem__info"
+      >
+        <p
+          class="listItem__info--price"
+        >
+          100,00 US$
+          <img
+            alt="Free Shipping"
+            class="listItem__info--icon"
+            src="ic_shipping.png"
+          />
+        </p>
+        <p
+          class="listItem__info--title"
+        >
+          Item Title
+        </p>
+      </div>
+    </div>
+    <div
+      class="listItem__location"
+    >
+      <p
+        class="listItem__location--city"
+      >
+        Item Address
+      </p>
+    </div>
+  </div>
+</div>
+`;

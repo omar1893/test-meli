@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component should match snapshot 1`] = `
+<div>
+  <div
+    class="notFoundContainer"
+  >
+    <h2>
+      Oops, lo sentimos...
+    </h2>
+    <p>
+      No pudimos encontrar ningún producto relacionado con tu búsqueda.
+    </p>
+  </div>
+</div>
+`;

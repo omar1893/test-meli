@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Should match snapshot 1`] = `
+<div>
+  <div
+    class="homeContainer"
+  >
+    <h2>
+      Bienvenido a Mercado Libre
+    </h2>
+    <p>
+      Empieza usando el buscador en la parte de ariba para encontrar todos los productos que quieras.
+    </p>
+  </div>
+</div>
+`;

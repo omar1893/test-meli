@@ -1,0 +1,26 @@
+@import "../../../src/index.scss";
+
+.breadcrumbs {
+  @include grid-positioning(2, 12);
+  font-size: 1.4rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  color: $dark-gray;
+  font-weight: 300;
+  text-decoration: none;
+
+  .breadcrumbs__item {
+    margin-right: 0.8rem;
+    text-transform: capitalize;
+  }
+
+  .breadcrumbs__item:last-child {
+    font-weight: bold;
+  }
+}
+
+.breadcrumbs.empty {
+  margin-bottom: 0;
+}
