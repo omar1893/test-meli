@@ -20,7 +20,11 @@ O ejecutar el comando:
 
 Este ultimo comando utiliza concurrently para ejecutar los dos primeros comandos al mismo tiempo.
 
-Adicionalmente, la carpeta client, admite los siguiente
+Adicionalmente, la carpeta client, admite los siguientes comandos: 
 
+    npm run test 
 
+y 
+
+    npm run test -- --coverage
 
