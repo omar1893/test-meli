@@ -24,7 +24,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "jest --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +43,12 @@
     },
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/(?!(axios|react-router-dom)/)"
+    ],
+    "coverageReporters": ["html"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.test.{js,jsx,ts,tsx}",
+      "!src/index.{js,jsx,ts,tsx}"
     ]
   },
   "browserslist": {

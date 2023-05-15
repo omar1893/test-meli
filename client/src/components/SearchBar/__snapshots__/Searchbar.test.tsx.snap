@@ -6,7 +6,8 @@ exports[`Searchbar Should match snapshot 1`] = `
     class="header"
   >
     <img
-      alt=""
+      alt="Logo Mercado Libre"
+      class="logo"
       src="Logo_ML.png"
     />
     <div
@@ -21,7 +22,7 @@ exports[`Searchbar Should match snapshot 1`] = `
         type="button"
       >
         <img
-          alt=""
+          alt="Search Icon"
           src="ic_Search.png"
         />
       </button>
