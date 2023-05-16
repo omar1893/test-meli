@@ -11,6 +11,12 @@
         border-radius: 0.4rem;
         margin-right: 1.6rem;
         grid-column-start: 1;
+
+        @media screen and (max-width: 700px) {
+            grid-column-start: 1;
+            grid-column-end: 11;
+            margin: 0 auto;
+        }
     }
     
     .listItem__info-container {
@@ -22,10 +28,16 @@
         .listItem__info--price {
             font-size: 2.4rem;
             margin-bottom: 3.2rem;
+            @media screen and (max-width: 700px) {
+                text-align: center;
+            }
         }
 
         .listItem__info--title {
             font-size: 1.8rem;
+            @media screen and (max-width: 700px) {
+                text-align: center;
+            }
         }
 
         .listItem__info--icon {
@@ -36,9 +48,17 @@
     .listItem__location {
         grid-column-start: 9;
         grid-column-end: 11;
+        @media screen and (max-width: 700px) {
+            grid-column-start: 1;
+        }
+
         .listItem__location--city {
             font-size: 1.4rem;
             color: $dark-gray;
+
+            @media screen and (max-width: 700px) {
+                text-align: center;
+            }
         }
     }
 }
