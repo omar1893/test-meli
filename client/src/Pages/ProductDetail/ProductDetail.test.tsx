@@ -17,8 +17,9 @@ describe("ProductDetail", () => {
           sold_quantity: 10,
           title: "Product Title",
           price: {
-            amount: "99.99",
+            amount: 99.99,
             currency: "USD",
+            decimals: 0
           },
           description: "Product Description",
         },

@@ -1,5 +1,5 @@
-export const priceFormatter = (price: string, currency: string) => {
-    const numericPrice = parseFloat(price);
+export const priceFormatter = (price: number, currency: string) => {
+    const numericPrice = price;
   if (isNaN(numericPrice)) {
     return '';
   }
@@ -8,6 +8,6 @@ export const priceFormatter = (price: string, currency: string) => {
     style: 'currency',
     currency: currency,
   });
-
+  
   return formattedPrice;
 }

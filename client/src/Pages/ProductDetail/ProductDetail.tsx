@@ -51,7 +51,7 @@ const ProductDetail = () => {
             </p>
             <p className="detailCard__info--title">{item?.title}</p>
             <p className="detailCard__info--price">
-              {item && priceFormatter(item.price.amount.toString(), item?.price.currency)} 
+              {item && priceFormatter(item.price.amount, item?.price.currency)} 
             </p>
             <button className="detailCard__info--button">Comprar</button>
           </div>

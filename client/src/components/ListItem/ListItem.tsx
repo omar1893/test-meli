@@ -3,8 +3,9 @@ import "./ListItem.scss";
 import FreeShipping from "../../assets/ic_shipping.png";
 import { useNavigate } from "react-router-dom";
 import { priceFormatter } from "../../utils/priceFormatter";
+import { ListItemProps } from "../../interfaces";
 
-const ListItem = ({ item }: any) => {
+const ListItem = ({ item }: ListItemProps) => {
   const navigate = useNavigate();
 
   const handleItemClick = () => {

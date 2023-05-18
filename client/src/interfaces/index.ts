@@ -4,11 +4,6 @@ interface Price {
     decimal: number;
 }
 
-interface Author {
-    name: string;
-    lastname: string;
-}
-
 export interface ItemInfo {
     id: number;
     title: string;
@@ -18,16 +13,22 @@ export interface ItemInfo {
     free_shipping: boolean;
     sold_quantity: number;
     description: string;
+    address: string;
 }
 
-export interface Item {
+export interface Author {
+    name: string;
+    lastname: string;
+}
+
+export interface ListItemProps {
     author: Author;
     item: ItemInfo;
 }
 
-export interface ListItem extends Item {
+/* export interface ListItem extends Item {
     categories: string[];
-}
+} */
 
 export interface BreadcrumbsProps {
     categories: string[];

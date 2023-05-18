@@ -7,9 +7,7 @@ export const getItems = (req: Request, res: Response) => {
   const search = req.query.q;
   if (search && typeof search === "string") {
     getItemsList(search).then((response: any) => {
-        console.log(response.data)
         const formattedList = listFormatter(response.data);
-        console.log(formattedList);
         res.send(formattedList);
     }
     );

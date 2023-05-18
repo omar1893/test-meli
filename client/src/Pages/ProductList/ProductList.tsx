@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BreadCrumbs } from "../../components/Breadcrumbs";
-import data from "../../test.json";
 import "./ProductList.scss";
 import { ListItem } from "../../components/ListItem";
 import axios from "axios";
 import { NotFound } from "../../components/NotFound";
 import { Loading } from "../../components/Loading";
+import { ItemInfo, Author } from "../../interfaces";
 
 const ProductList = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const searchString = searchParams.get("search");
 
-  const [categories, setCategories] = useState(data.categories);
-  const [items, setItems] = useState([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [author, setAuthor] = useState<Author>({name: '', lastname: ''})
+  const [items, setItems] = useState<ItemInfo[]>([]);
   const [loading, setLoading] = useState(false);
 
   const getItems = async () => {
@@ -25,6 +26,7 @@ const ProductList = () => {
       );
       const { data } = await response;
       setItems(data.items);
+      setAuthor(data.author)
       setCategories(data.categories);
       localStorage.setItem("categories", JSON.stringify(data.categories));
       setLoading(false);
@@ -43,9 +45,9 @@ const ProductList = () => {
         <div className="list">
           {categories && <BreadCrumbs categories={categories} />}
           <div className="list__container">
-            {items.map((item: any, index: number) => (
+            {items.map((item: ItemInfo, index: number) => (
               <div key={item.title}>
-                <ListItem item={item} />
+                <ListItem item={item} author={author}/>
                 {index !== items.length - 1 && (
                   <hr className="list__container--divider" />
                 )}

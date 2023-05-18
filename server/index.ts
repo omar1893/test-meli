@@ -12,8 +12,3 @@ app.use((req, res, next) => {
   next();
 });
 app.use('/', itemsRoutes)
-
-
-app.listen(PORT, () => {
-  console.log(`Servidor Express escuchando en el puerto ${PORT}`);
-});

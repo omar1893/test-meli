@@ -9,25 +9,34 @@ jest.mock("react-router-dom", () => ({
 }));
 
 describe("ListItem", () => {
+
+  const author = {
+    name: 'Omar',
+    lastname: 'Lopez'
+  }
   const item = {
     id: 1,
     picture: "item-picture.jpg",
     price: {
       amount: 100,
       currency: "USD",
+      decimal: 0,
     },
     free_shipping: true,
     title: "Item Title",
     address: "Item Address",
+    condition: 'new',
+    sold_quantity: 100,
+    description: ''
   };
 
   it("Should match snapshot", () => {
-    const { container } = render(<ListItem item={item} />);
+    const { container } = render(<ListItem item={item} author={author}/>);
     expect(container).toMatchSnapshot();
   });
 
   it("Should display item details correctly", () => {
-    render(<ListItem item={item} />);
+    render(<ListItem item={item} author={author}/>);
 
     const priceElement = screen.getByText("100,00 US$");
     const titleElement = screen.getByText("Item Title");
@@ -44,7 +53,7 @@ describe("ListItem", () => {
     const navigateMock = jest.fn();
     (useNavigate as jest.Mock).mockImplementation(() => navigateMock);
 
-    const { container } = render(<ListItem item={item} />);
+    const { container } = render(<ListItem item={item} author={author}/>);
 
     const listItemElement = container.querySelector(".listItem") as Element;
     fireEvent.click(listItemElement)
