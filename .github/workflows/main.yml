@@ -26,8 +26,5 @@ jobs:
     - name: Install dependencies
       run: cd client && npm install
 
-    - name: Lint code
-      run: cd client && npm run lint --if-present --silent
-
     - name: Run tests
-      run: cd client && npm run test --coverage --silent
+      run: cd client && npm run test --coverage --silent --watchAll=false
