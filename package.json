@@ -8,7 +8,7 @@
   "scripts": {
     "start-client": "cd client && npm start",
     "start-server": "nodemon --exec ts-node server/index.ts",
-    "start": "concurrently \"npm run start-client\" \"npm run start-server\""
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\""
   },
   "dependencies": {
     "axios": "^1.4.0",

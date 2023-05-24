@@ -19,7 +19,7 @@ exports[`ListItem Should match snapshot 1`] = `
         <p
           class="listItem__info--price"
         >
-          100,00 US$
+          $100.00
           <img
             alt="Free Shipping"
             class="listItem__info--icon"

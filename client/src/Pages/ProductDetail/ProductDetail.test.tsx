@@ -47,7 +47,7 @@ describe("ProductDetail", () => {
       </MemoryRouter>
     );
     expect(await screen.findByText("Product Title")).toBeInTheDocument();
-    expect(await screen.findByText("99,99 US$")).toBeInTheDocument();
+    expect(await screen.findByText("$99.99")).toBeInTheDocument();
     expect(await screen.findByText("Product Description")).toBeInTheDocument();
   });
 });

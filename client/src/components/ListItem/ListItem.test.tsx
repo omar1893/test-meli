@@ -38,7 +38,7 @@ describe("ListItem", () => {
   it("Should display item details correctly", () => {
     render(<ListItem item={item} author={author}/>);
 
-    const priceElement = screen.getByText("100,00 US$");
+    const priceElement = screen.getByText("$100.00");
     const titleElement = screen.getByText("Item Title");
     const addressElement = screen.getByText("Item Address");
     const shippingIconElement = screen.getByAltText("Free Shipping");
