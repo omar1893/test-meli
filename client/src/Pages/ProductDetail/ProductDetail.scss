@@ -19,7 +19,7 @@
         width: 68rem;
       }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 1350px) {
         grid-column-end: 11;
         img {
           width: 100%;
@@ -55,7 +55,7 @@
         font-size: 2rem;
       }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 1350px) {
         grid-column-start: 1;
         text-align: center;
     }
@@ -78,7 +78,7 @@
       font-size: 1.6rem;
       color: $dark-gray;
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 1350px) {
         grid-column-end: 11;
     }
     }

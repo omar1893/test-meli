@@ -7,35 +7,26 @@ import { priceFormatter } from "../../utils/priceFormatter";
 import { BreadCrumbs } from "../../components/Breadcrumbs";
 import { Loading } from "../../components/Loading";
 import { CONDITION } from "../../utils/condition";
+import useFetch from "../../customHooks/useFetch";
 
 const ProductDetail = () => {
   const [item, setItem] = useState<ItemInfo>();
   const [categories, setCategories] = useState<string[]>([]) 
-  const { id } = useParams();
-  const [loading, setLoading] = useState(false)
-
-  const getItem = async () => {
-    if (id) {
-      setLoading(true)
-      try {
-        const response = await axios.get(`http://localhost:3001/api/items/${id}`);
-        const { data } = await response;
-        setItem(data.item);
-        setLoading(false)
-      } catch (error) {
-        setLoading(false)
-        console.log(error)
-      }
-    }
-  };
+  const { id = '' } = useParams();
+  const {data, loading} = useFetch(false, id)
 
   useEffect(() => {
     const lsCategories = localStorage.getItem('categories');
     if (lsCategories) {
       setCategories(JSON.parse(lsCategories));
     }
-    getItem();
   }, [id]);
+
+  useEffect(() => {
+    if(!!data) {
+      setItem(data as ItemInfo)
+    }
+  }, [data])
 
   return loading ? (<Loading/>) : (
     <div className="container">

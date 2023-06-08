@@ -3,37 +3,31 @@ import { useLocation } from "react-router-dom";
 import { BreadCrumbs } from "../../components/Breadcrumbs";
 import "./ProductList.scss";
 import { ListItem } from "../../components/ListItem";
-import axios from "axios";
 import { NotFound } from "../../components/NotFound";
 import { Loading } from "../../components/Loading";
-import { ItemInfo, Author } from "../../interfaces";
+import { ItemInfo, Author, ListFetch } from "../../interfaces";
+import useFetch from "../../customHooks/useFetch";
 
 const ProductList = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const searchString = searchParams.get("search");
+  const searchString = searchParams.get("search") || "";
 
   const [categories, setCategories] = useState<string[]>([]);
-  const [author, setAuthor] = useState<Author>({name: '', lastname: ''})
+  const [author, setAuthor] = useState<Author>({ name: "", lastname: "" });
   const [items, setItems] = useState<ItemInfo[]>([]);
-  const [loading, setLoading] = useState(false);
+  const { data, loading } = useFetch(true, searchString);
 
-  const getItems = async () => {
-    setLoading(true);
-    try {
-      const response = await axios.get(
-        `http://localhost:3001/api/items?q=${searchString}`
-      );
-      const { data } = await response;
-      setItems(data.items);
-      setAuthor(data.author)
-      setCategories(data.categories);
-      localStorage.setItem("categories", JSON.stringify(data.categories));
-      setLoading(false);
-    } catch (error) {
-      setLoading(false);
+  useEffect(() => {
+    console.log(data);
+    if (!!data) {
+      const listInfo = data as ListFetch;
+      setItems(listInfo.items);
+      setAuthor(listInfo.author)
+      setCategories(listInfo.categories);
+      localStorage.setItem("categories", JSON.stringify(listInfo.categories));
     }
-  };
+  }, [data]);
 
   const renderHandler = () => {
     if (!items.length && loading) {
@@ -47,7 +41,7 @@ const ProductList = () => {
           <div className="list__container">
             {items.map((item: ItemInfo, index: number) => (
               <div key={item.title}>
-                <ListItem item={item} author={author}/>
+                <ListItem item={item} author={author} />
                 {index !== items.length - 1 && (
                   <hr className="list__container--divider" />
                 )}
@@ -58,10 +52,6 @@ const ProductList = () => {
       );
     }
   };
-
-  useEffect(() => {
-    getItems();
-  }, [, location]);
 
   return renderHandler();
 };

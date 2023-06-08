@@ -34,3 +34,13 @@ export interface BreadcrumbsProps {
     categories: string[];
 }
 
+export interface ListFetch {
+    author: Author;
+    items: ItemInfo[];
+    categories: string[];
+}
+
+export interface UseFetchReturn {
+    data: ListFetch | ItemInfo;
+    loading: boolean
+}
