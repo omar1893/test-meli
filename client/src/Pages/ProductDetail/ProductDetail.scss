@@ -40,6 +40,10 @@
       .detailCard__info--price {
         font-size: 4.6rem;
         margin-bottom: 3.2rem;
+
+        @media screen and (max-width: 550px) {
+          font-size: 3rem;
+        }
       }
       .detailCard__info--button {
         background-color: $blue-cta;

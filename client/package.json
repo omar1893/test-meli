@@ -47,6 +47,8 @@
     ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
+      "!src/App.tsx",
+      "!src/index.tsx",
       "!**/*.d.ts"
     ]
   },
