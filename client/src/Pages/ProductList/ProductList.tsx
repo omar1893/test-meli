@@ -19,7 +19,6 @@ const ProductList = () => {
   const { data, loading } = useFetch(true, searchString);
 
   useEffect(() => {
-    console.log(data);
     if (!!data) {
       const listInfo = data as ListFetch;
       setItems(listInfo.items);

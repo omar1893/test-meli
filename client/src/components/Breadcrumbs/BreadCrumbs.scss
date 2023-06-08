@@ -3,8 +3,8 @@
 .breadcrumbs {
   @include grid-positioning(2, 12);
   font-size: 1.4rem;
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin-top: $spacing-sm;
+  margin-bottom: $spacing-sm;
   display: flex;
   align-items: center;
   color: $dark-gray;
@@ -12,7 +12,7 @@
   text-decoration: none;
 
   .breadcrumbs__item {
-    margin-right: 0.8rem;
+    margin-right: $spacing-xs;
     text-transform: capitalize;
   }
 

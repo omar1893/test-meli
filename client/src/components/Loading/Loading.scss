@@ -1,4 +1,6 @@
+@import "../../../src/index.scss";
+
 .loading-message {
     text-align: center;
-    font-size: 3.2rem
+    font-size: $spacing-lg
 }

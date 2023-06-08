@@ -20,7 +20,6 @@ const useFetch = (list: boolean, param: string) => {
     try {
       const response = await axios.get(url);
       const { data } = response;
-      console.log(data);
 
       setData(list ? data : data.item);
       setLoading(false);

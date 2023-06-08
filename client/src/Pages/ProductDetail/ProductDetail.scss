@@ -6,7 +6,7 @@
   .detailCard {
     @include grid-positioning(2, 12);
     background-color: #ffffff;
-    padding: 3.2rem;
+    padding: $spacing-lg;
     margin-bottom:2rem
   }
 
@@ -31,15 +31,15 @@
       @include grid-positioning(8, 11);
       .detailCard__info--condition {
         font-size: 1.4rem;
-        margin-bottom: 1.6rem;
+        margin-bottom: $spacing-sm;
       }
       .detailCard__info--title {
         font-size: 2.4rem;
-        margin-bottom: 3.2rem;
+        margin-bottom: $spacing-lg;
       }
       .detailCard__info--price {
         font-size: 4.6rem;
-        margin-bottom: 3.2rem;
+        margin-bottom: $spacing-lg;
 
         @media screen and (max-width: 550px) {
           font-size: 3rem;
@@ -73,13 +73,13 @@
       @include grid-positioning(1, 12);
       @include grid-positioning-rows(1, auto);
       font-size: 2.8rem;
-      margin-bottom: 3.2rem;
+      margin-bottom: $spacing-lg;
     }
 
     .detailCard__description--text {
       @include grid-positioning-rows(2, auto);
       @include grid-positioning(1, 8);
-      font-size: 1.6rem;
+      font-size: $spacing-sm;
       color: $dark-gray;
 
       @media screen and (max-width: 1350px) {
